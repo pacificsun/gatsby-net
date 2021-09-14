@@ -7,13 +7,18 @@ require("dotenv").config()
 module.exports = {
   /* Your site config here */
   plugins: [
+    `gatsby-transformer-remark`,
     {
-      resolve: "gatsby-source-shopify",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        password: process.env.SHOPIFY_ADMIN_PASSWORD,
-        storeUrl: process.env.SHOPIFY_STORE_URL,
+        name: `projects`,
+        path: `${__dirname}/src/projects/`,
       },
     },
-    "gatsby-plugin-image",
   ],
+  siteMetadata: {
+    title: "Web Net",
+    description: "Web Dev portfolio",
+    copyright: "This website is copyright 2021 web net",
+  },
 }

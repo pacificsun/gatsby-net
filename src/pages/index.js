@@ -1,8 +1,9 @@
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import React from "react"
 import Layout from "../components/Layout"
 import "../styles/home.module.css"
 
+// step 2: destructure data
 export default function Home() {
   return (
     <Layout>
@@ -20,3 +21,7 @@ export default function Home() {
     </Layout>
   )
 }
+
+// page query
+// Adding dynamic data in pages
+// step 1.
